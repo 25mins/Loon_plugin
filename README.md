@@ -1,5 +1,6 @@
-### Loon_plugin
+### Loon插件
 自学测试，请勿使用。
 
-在这块领域是全新学徒，自建repo纯为自学。抓包工具HTTP Catcher。
-版权所有，侵权必删。
+全新学徒，自建repo纯为自学。抓包工具HTTP Catcher。
+
+如有版权问题，侵权必删。
