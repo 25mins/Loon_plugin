@@ -13,6 +13,7 @@
 ^https?:\/\/m\.360buyimg\.com\/babel\/jfs\/t1\/180291\/5\/23800\/294871\/625f5da2E13ac0ba3\/230238c767c61b6d\.jpg reject
 
 ^https?:\/\/s3plus\.meituan\.net\/v\d+\/mss_\w+\/nebulafile\/[a-zA-Z0-9+\-_]* reject
+^https?:\/\/i\d\.hoopchina\.com\.cn//feedback_api\/img\/\*.[a-zA-Z0-9+\-_]+.jpg reject-img
 
 [MITM]
-s3plus.meituan.net
+s3plus.meituan.net,*.hoopchina.com
