@@ -4,6 +4,21 @@
 #!author=FebRay
 # 由个人维护，0团队
 [URL Rewrite]
+# ============= D ============ #
+# 豆瓣
+^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash url reject
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* url reject
+# 斗鱼
+^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo url reject
+
+# ============= E ============ #
+# 饿了么
+^https?:\/\/elemecdn.com\/.+\/sitemap url reject
+^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} url reject
+^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} url reject
+^https?:\/\/fuss10.elemecdn.com\/.+.mp4 url reject
+^https?:\/\/www1.elecfans.com\/www\/delivery\/ url reject
+
 # ============= H ============ #
 # 虎扑
 ^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ url reject-img
@@ -12,7 +27,7 @@
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther url reject
 ^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} url reject-img
 
-# ======= M ======= #
+# ============ M ============= #
 # 美团
 ^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage url reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ url reject
@@ -24,7 +39,7 @@
 ^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?ad|appstatus\?ad|loadInfo\?|startpicture) url reject
 ^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?time url reject
 
-# ============ W ============ #
+# ============ W ============= #
 # 网易严选
 https://support.you.163.com/appversync/check.do url reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json url reject
