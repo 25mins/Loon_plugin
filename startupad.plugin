@@ -1,7 +1,7 @@
-#!name=NoSUAd
+#!name=NoAd
 #!desc=去开屏广告
 #!icon=https://img.icons8.com/stickers/100/web-advertising.png
-#!author=FebRay
+#!author = 25mins
 # 由个人维护，0团队
 [URL Rewrite]
 # ============= D ============ #
