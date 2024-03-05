@@ -2,7 +2,7 @@
 #!desc = 彩云天气SVIP解锁
 #!作者电报：https://t.me/GieGie777
 #!author = WeiGiegie
-#!icon = https://raw.githubusercontent.com/FebRay/Loon_plugin/main/icons/caiyun.jpeg
+#!icon = https://raw.githubusercontent.com/25mins/Loon_plugin/main/icons/caiyun.jpeg
 [MITM]
 hostname=*.caiyunapp.*,*cyapi*
 [Script]
