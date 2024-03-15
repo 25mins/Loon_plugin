@@ -30,9 +30,9 @@
 
 # ============ J ============= #
 # JUMP
-^https:\/\/zlsdk\.1rtb\.net\/imp reject-200
-^https?:\/\/zlsdk\.1rtb\.net\/sdk reject-200
-^https?:\/\/ssp\.1rtb\.com\/imp reject-200
+^https:\/\/zlsdk\.1rtb\.net\/imp reject
+^https?:\/\/zlsdk\.1rtb\.net\/sdk reject
+^https?:\/\/ssp\.1rtb\.com\/imp reject
 
 # ============ M ============= #
 # 美团
