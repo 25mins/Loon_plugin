@@ -28,6 +28,11 @@
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther url reject
 ^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} url reject-img
 
+# ============ J ============= #
+# JUMP
+^https:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad reject-dict
+^https?:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad\? reject-200
+
 # ============ M ============= #
 # 美团
 ^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage url reject
