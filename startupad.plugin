@@ -1,10 +1,20 @@
 #!name=NoAd
-#!desc=去开屏广告
+#!desc=自用去广告
 #!icon=https://img.icons8.com/stickers/100/web-advertising.png
 #!author = 25mins
-#!date = 2024-3-15
-# 由个人维护，0团队
-[URL Rewrite]
+#!date = 2025-6-19
+#!system = iOS
+#!loon_version = 3.2.1(372)
+#!tag = 去广告
+# 由个人维护，单纯练手用。
+[rule]
+# ============ D ============= #
+# The Score
+DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+
+
+[Rewrite]
 # ============= D ============ #
 # 豆瓣
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash url reject
