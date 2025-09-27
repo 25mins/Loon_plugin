@@ -11,22 +11,22 @@
 
 [Rewrite]
 # g -> Google
-^https?://www\.baidu\.com/s\?wd=(g%20(.+))(&.*)?$ url 302 https://www.google.com/search?q=$2
+^https?://www\.baidu\.com/s\?wd=(g%20([^&]+))(&.*)?$ url 302 https://www.google.com/search?q=$2
 
 # b -> Bing
-^https?://www\.baidu\.com/s\?wd=(b%20(.+))(&.*)?$ url 302 https://www.bing.com/search?q=$2
+^https?://www\.baidu\.com/s\?wd=(b%20([^&]+))(&.*)?$ url 302 https://www.bing.com/search?q=$2
 
 # ddg -> DuckDuckGo
-^https?://www\.baidu\.com/s\?wd=(ddg%20(.+))(&.*)?$ url 302 https://duckduckgo.com/?q=$2
+^https?://www\.baidu\.com/s\?wd=(ddg%20([^&]+))(&.*)?$ url 302 https://duckduckgo.com/?q=$2
 
 # gh -> GitHub 搜索
-^https?://www\.baidu\.com/s\?wd=(gh%20(.+))(&.*)?$ url 302 https://github.com/search?q=$2&type=repositories
+^https?://www\.baidu\.com/s\?wd=(gh%20([^&]+))(&.*)?$ url 302 https://github.com/search?q=$2&type=repositories
 
 # wk -> Wikipedia（中文）
-^https?://www\.baidu\.com/s\?wd=(wk%20(.+))(&.*)?$ url 302 https://zh.wikipedia.org/w/index.php?search=$2
+^https?://www\.baidu\.com/s\?wd=(wk%20([^&]+))(&.*)?$ url 302 https://zh.wikipedia.org/w/index.php?search=$2
 
-# r -> Reddit
-^https?://www\.baidu\.com/s\?wd=(r%20(.+))(&.*)?$ url 302 https://www.reddit.com/search/?q=$2
+# r -> Reddit 全局搜索（简单版）
+^https?://www\.baidu\.com/s\?wd=(r%20([^&]+))(&.*)?$ url 302 https://www.reddit.com/search/?q=$2
 
 [MITM]
 hostname = baidu.com
