@@ -9,7 +9,7 @@
 # Wikipedia：用中文版 zh.wikipedia.org，若需英文改成 en.wikipedia.org。
 # Reddit：基本搜索 URL，支持子版块但这里是全局。
 
-[Rewrite]
+[Url Rewrite]
 # g -> Google
 ^https?://www\.baidu\.com/s\?wd=(g%20([^&]+))(&.*)?$ 302
 https://www.google.com/search?q=$2
