@@ -1,7 +1,7 @@
 #!name = 机灵搜索
 #!desc = 利用重定向功能切换搜索引擎
 #!author = 25mins
-#!date = 2025.9.28
+#!date = 2025.9.28 2:27
 
 # 仅供学习，勿用勿卖！
 
@@ -11,22 +11,28 @@
 
 [Rewrite]
 # g -> Google
-^https?://www\.baidu\.com/s\?wd=(g%20([^&]+))(&.*)?$ url 302 https://www.google.com/search?q=$2
+^https?://www\.baidu\.com/s\?wd=(g%20([^&]+))(&.*)?$ 302
+https://www.google.com/search?q=$2
 
 # b -> Bing
-^https?://www\.baidu\.com/s\?wd=(b%20([^&]+))(&.*)?$ url 302 https://www.bing.com/search?q=$2
+^https?://www\.baidu\.com/s\?wd=(b%20([^&]+))(&.*)?$ 302
+https://www.bing.com/search?q=$2
 
 # ddg -> DuckDuckGo
-^https?://www\.baidu\.com/s\?wd=(ddg%20([^&]+))(&.*)?$ url 302 https://duckduckgo.com/?q=$2
+^https?://www\.baidu\.com/s\?wd=(ddg%20([^&]+))(&.*)?$ 302
+https://duckduckgo.com/?q=$2
 
 # gh -> GitHub 搜索
-^https?://www\.baidu\.com/s\?wd=(gh%20([^&]+))(&.*)?$ url 302 https://github.com/search?q=$2&type=repositories
+^https?://www\.baidu\.com/s\?wd=(gh%20([^&]+))(&.*)?$ 302
+https://github.com/search?q=$2&type=repositories
 
 # wk -> Wikipedia（中文）
-^https?://www\.baidu\.com/s\?wd=(wk%20([^&]+))(&.*)?$ url 302 https://zh.wikipedia.org/w/index.php?search=$2
+^https?://www\.baidu\.com/s\?wd=(wk%20([^&]+))(&.*)?$ 302
+https://zh.wikipedia.org/w/index.php?search=$2
 
 # r -> Reddit 全局搜索（简单版）
-^https?://www\.baidu\.com/s\?wd=(r%20([^&]+))(&.*)?$ url 302 https://www.reddit.com/search/?q=$2
+^https?://www\.baidu\.com/s\?wd=(r%20([^&]+))(&.*)?$ 302
+https://www.reddit.com/search/?q=$2
 
 [MITM]
 hostname = baidu.com
