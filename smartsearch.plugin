@@ -14,10 +14,10 @@
 
 [Url Rewrite]
 # g -> Google
-^https:\/\/.*baidu\.com\/s\?wd=(g\+([^&]+))(&.*)?$ 302 https://www.google.com/search?q=$2
+^https:\/\/.*baidu\.com\/s\?wd=g\+([^&]+).+ 302 https://www.google.com/search?q=$1
 
 # b -> Bing
-^https?://www\.baidu\.com/s\?wd=(b\x20([^&]+))(&.*)?$ 302 https://www.bing.com/search?q=$2
+^https?://www\.baidu\.com/s\?wd=b\+([^&]+).+ 302 https://www.bing.com/search?q=$1
 
 # ddg -> DuckDuckGo
 ^https?://www\.baidu\.com/s\?wd=(ddg\x20([^&]+))(&.*)?$ 302 https://duckduckgo.com/?q=$2
