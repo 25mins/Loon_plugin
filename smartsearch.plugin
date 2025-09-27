@@ -1,0 +1,32 @@
+#!name = 机灵搜索
+#!desc = 利用重定向功能切换搜索引擎
+#!author = 25mins
+#!date = 2025.9.28
+
+# 仅供学习，勿用勿卖！
+
+# GitHub：添加 &type=repositories 优先仓库搜索（可改成 &type=code 等）。
+# Wikipedia：用中文版 zh.wikipedia.org，若需英文改成 en.wikipedia.org。
+# Reddit：基本搜索 URL，支持子版块但这里是全局。
+
+[Rewrite]
+# g -> Google
+^https?://www\.baidu\.com/s\?wd=(g%20(.+))(&.*)?$ url 302 https://www.google.com/search?q=$2
+
+# b -> Bing
+^https?://www\.baidu\.com/s\?wd=(b%20(.+))(&.*)?$ url 302 https://www.bing.com/search?q=$2
+
+# ddg -> DuckDuckGo
+^https?://www\.baidu\.com/s\?wd=(ddg%20(.+))(&.*)?$ url 302 https://duckduckgo.com/?q=$2
+
+# gh -> GitHub 搜索
+^https?://www\.baidu\.com/s\?wd=(gh%20(.+))(&.*)?$ url 302 https://github.com/search?q=$2&type=repositories
+
+# wk -> Wikipedia（中文）
+^https?://www\.baidu\.com/s\?wd=(wk%20(.+))(&.*)?$ url 302 https://zh.wikipedia.org/w/index.php?search=$2
+
+# r -> Reddit
+^https?://www\.baidu\.com/s\?wd=(r%20(.+))(&.*)?$ url 302 https://www.reddit.com/search/?q=$2
+
+[MITM]
+hostname = baidu.com
