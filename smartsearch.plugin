@@ -10,25 +10,26 @@
 # GitHub：添加 &type=repositories 优先仓库搜索（可改成 &type=code 等）。
 # Wikipedia：用中文版 zh.wikipedia.org，若需英文改成 en.wikipedia.org。
 # Reddit：基本搜索 URL，支持子版块但这里是全局。
+# 注意：由于在解析配置是用空格分割各个参数，如果配置的参数中有空格，请使用\x20代替（参考https://nsloon.app/docs/Rewrite/）
 
 [Url Rewrite]
 # g -> Google
-^https?://www\.baidu\.com/s\?wd=(g%20([^&]+))(&.*)?$ 302 https://www.google.com/search?q=$2
+^https?://www\.baidu\.com/s\?wd=(g\x20([^&]+))(&.*)?$ 302 https://www.google.com/search?q=$2
 
 # b -> Bing
-^https?://www\.baidu\.com/s\?wd=(b%20([^&]+))(&.*)?$ 302 https://www.bing.com/search?q=$2
+^https?://www\.baidu\.com/s\?wd=(b\x20([^&]+))(&.*)?$ 302 https://www.bing.com/search?q=$2
 
 # ddg -> DuckDuckGo
-^https?://www\.baidu\.com/s\?wd=(ddg%20([^&]+))(&.*)?$ 302 https://duckduckgo.com/?q=$2
+^https?://www\.baidu\.com/s\?wd=(ddg\x20([^&]+))(&.*)?$ 302 https://duckduckgo.com/?q=$2
 
 # gh -> GitHub 搜索
-^https?://www\.baidu\.com/s\?wd=(gh%20([^&]+))(&.*)?$ 302 https://github.com/search?q=$2&type=repositories
+^https?://www\.baidu\.com/s\?wd=(gh\x20([^&]+))(&.*)?$ 302 https://github.com/search?q=$2&type=repositories
 
 # wk -> Wikipedia（中文）
-^https?://www\.baidu\.com/s\?wd=(wk%20([^&]+))(&.*)?$ 302 https://zh.wikipedia.org/w/index.php?search=$2
+^https?://www\.baidu\.com/s\?wd=(wk\x20([^&]+))(&.*)?$ 302 https://zh.wikipedia.org/w/index.php?search=$2
 
 # r -> Reddit 全局搜索（简单版）
-^https?://www\.baidu\.com/s\?wd=(r%20([^&]+))(&.*)?$ 302 https://www.reddit.com/search/?q=$2
+^https?://www\.baidu\.com/s\?wd=(r\x20([^&]+))(&.*)?$ 302 https://www.reddit.com/search/?q=$2
 
 [MITM]
 hostname = baidu.com
