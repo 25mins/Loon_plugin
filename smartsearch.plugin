@@ -1,7 +1,7 @@
 #!name = 机灵搜索
 #!desc = 利用重定向功能切换搜索引擎
 #!author = 25mins
-#!date = 2025.9.28 3:00
+#!date = 2025.9.28 23:43
 #!system = iOS
 #!loon_version = 3.3.4(898)
 
@@ -13,12 +13,10 @@
 
 [Rewrite]
 # g -> Google
-#^https:\/\/www\.baidu\.com\/s\?wd=g\+([^&]+).+ 302 https://www.google.com/search?q=$1
-
-^https:\/\/www\.baidu\.com 307 https://www.google.com/
+^https:\/\/www\.baidu\.com\/s\?wd=g\+([^&]+).+ 307 https://www.google.com/search?q=$1
 
 # b -> Bing
-#^https?://www\.baidu\.com/s\?word=b\+([^&]+).+ 302 https://www.bing.com/search?q=$1
+#^https?://www\.baidu\.com/s\?wd=b\+([^&]+).+ 302 https://www.bing.com/search?q=$1
 
 # ddg -> DuckDuckGo
 #^https?://www\.baidu\.com/s\?wd=(ddg\x20([^&]+))(&.*)?$ 302 https://duckduckgo.com/?q=$2
@@ -31,6 +29,9 @@
 
 # r -> Reddit 全局搜索（简单版）
 #^https?://www\.baidu\.com/s\?wd=(r\x20([^&]+))(&.*)?$ 302 https://www.reddit.com/search/?q=$2
+
+#重定向示例
+#^https:\/\/www\.baidu\.com 307 https://www.google.com/
 
 [MITM]
 hostname = *.baidu.com,google.com
