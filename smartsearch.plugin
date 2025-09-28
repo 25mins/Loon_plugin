@@ -1,7 +1,8 @@
 #!name = 机灵搜索
 #!desc = 利用重定向功能切换搜索引擎
+#!icon = https://raw.githubusercontent.com/25mins/Loon_plugin/refs/heads/main/icons/IMG_5177.png
 #!author = 25mins
-#!date = 2025.9.29 00:29
+#!date = 2025.9.29 00:41
 #!system = iOS
 #!loon_version = 3.3.4(898)
 
