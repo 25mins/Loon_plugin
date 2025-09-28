@@ -16,7 +16,7 @@
 # g -> Google
 #^https:\/\/m\.baidu\.com\/s\?wd=g\+([^&]+).+ 302 https://www.google.com/search?q=$1
 
-^https:\/\/m\.baidu\.com 302 https://www.google.com/search
+^https:\/\/(m.)?baidu\.com 307 https://www.google.com/search
 
 # b -> Bing
 ^https?://www\.baidu\.com/s\?word=b\+([^&]+).+ 302 https://www.bing.com/search?q=$1
