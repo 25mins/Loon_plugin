@@ -12,25 +12,6 @@
 # Reddit：基本搜索 URL，支持子版块但这里是全局。
 
 [Rewrite]
-# g -> Google
-#^https:\/\/www\.baidu\.com\/s\?wd=g\+([^&]+).+ 307 https://www.google.com/search?q=$1
-
-# b -> Bing
-#^https?://www\.baidu\.com/s\?wd=b\+([^&]+).+ 302 https://www.bing.com/search?q=$1
-
-# ddg -> DuckDuckGo
-#^https?://www\.baidu\.com/s\?wd=(ddg\x20([^&]+))(&.*)?$ 302 https://duckduckgo.com/?q=$2
-
-# gh -> GitHub 搜索
-#^https?://www\.baidu\.com/s\?wd=(gh\x20([^&]+))(&.*)?$ 302 https://github.com/search?q=$2&type=repositories
-
-# wk -> Wikipedia（中文）
-#^https?://www\.baidu\.com/s\?wd=(wk\x20([^&]+))(&.*)?$ 302 https://zh.wikipedia.org/w/index.php?search=$2
-
-# r -> Reddit 全局搜索（简单版）
-#^https?://www\.baidu\.com/s\?wd=(r\x20([^&]+))(&.*)?$ 302 https://www.reddit.com/search/?q=$2
-
-
 # g -> Google (/s 主搜索，优先)
 ^https:\/\/m\.baidu\.com\/s\?.*word=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
 
@@ -69,6 +50,8 @@
 
 #重定向示例
 #^https:\/\/www\.baidu\.com 307 https://www.google.com/
+#前期调试重定向一直匹配不到是因为百度搜索s和word，su和wd之间有太多其他的参数（loon抓包看到的）。比如from，action，ie。所以我在wd参数和word参数之间选择模糊匹配。
+#iOS的Safari中，+表示空格，我保留%20是为了匹配Chrome，还未测试和抓包，这是检索来的结论。
 
 [MITM]
 hostname = baidu.com,m.baidu.com,google.com
