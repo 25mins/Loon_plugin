@@ -34,4 +34,4 @@
 ^https?://www\.baidu\.com/s\?wd=(r\x20([^&]+))(&.*)?$ 302 https://www.reddit.com/search/?q=$2
 
 [MITM]
-hostname = baidu.com,google.com
+hostname = *.baidu.com,google.com
