@@ -2,7 +2,7 @@
 #!desc = 利用重定向功能切换搜索引擎
 #!icon = https://raw.githubusercontent.com/25mins/Loon_plugin/refs/heads/main/icons/IMG_5177.png
 #!author = 25mins
-#!date = 2025.9.29 00:41
+#!date = 2025.9.29 09:40
 #!system = iOS
 #!loon_version = 3.3.4(898)
 
@@ -53,10 +53,10 @@
 #^https:\/\/www\.baidu\.com 307 https://www.google.com/
 
 # 前期调试重定向一直匹配不到是因为百度搜索s和word，su和wd之间有太多其他的参数（loon抓包看到的）。比如from，action，ie。所以我在wd参数和word参数之间选择模糊匹配。
-# iOS的Safari中，+表示空格，我保留%20是为了匹配Chrome，还未测试和抓包，这是检索来的结论。
+# Safari中，+ 表示空格，我保留 %20 是为了匹配Chrome以及Edge。
 
 # • /s：这是百度的主搜索端点（search endpoint），用于提交完整的搜索查询并返回搜索结果页面（SERP）。例如，https://www.baidu.com/s?wd=关键词 会直接执行搜索并显示结果列表。
 # • /su：这是搜索建议端点（suggestion endpoint），用于提供输入框中的自动补全建议（autocomplete 或 suggest）。例如，https://suggestion.baidu.com/su?wd=关键词 会返回 JSON 格式的热门相关词建议，帮助用户快速完善查询。
 
 [MITM]
-hostname = baidu.com,m.baidu.com,google.com
+hostname = baidu.com,m.baidu.com
