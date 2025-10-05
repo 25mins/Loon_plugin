@@ -2,7 +2,7 @@
 #!desc=自用去广告
 #!icon=https://img.icons8.com/stickers/100/web-advertising.png
 #!author = 25mins
-#!date = 2025.9.24
+#!date = 2025.10.5
 #!system = iOS
 #!loon_version = 3.3.4(898)
 #!tag = 去广告
@@ -12,7 +12,9 @@
 # The Score
 DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
 DOMAIN-SUFFIX,doubleclick.net,REJECT
-
+# ============ W ============= #
+# 微信公众号
+DOMAIN-SUFFIX,wxs.qq.com,REJECT
 
 [Rewrite]
 # ============= D ============ #
@@ -62,7 +64,11 @@ https://support.you.163.com/appversync/check.do url reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json url reject
 ^https?:\/\/m\.you\.163\.com\/activity\/popWindow url reject
 ^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 url reject
+# 微信公众号
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_  info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? reject-dict
+^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword reject-dict
+
 
 [MITM]
 hostname = api.douban.com,rtbapi.douyucdn.cn, elemecdn.com,fuss10.elemecdn.com,www1.elecfans.com,*.hoopchina.com, goblin.hupu.com, tcmobileapi.17usoft.com,zlsdk.1rtb.net,ssp.1rtb.com,peisongapi.meituan.com,img.meituan.net,s3plus.meituan.net,flowplus.meituan.net,p*.meituan.net,www.meituan.com,wmapi.meituan.com,
-support.you.163.com,m.you.163.com,yanxuan.nosdn.127.net
+support.you.163.com,m.you.163.com,yanxuan.nosdn.127.net,mp.weixin.qq.com
